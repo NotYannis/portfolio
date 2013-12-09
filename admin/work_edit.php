@@ -72,4 +72,17 @@ include '../partials/admin_header.php';
 	<button type="submit" class="btn btn-default">Enregistrer</button>
 </form>
 
+
+<?php ob_start(); ?>
+<script scr="<?= WEBROOT; ?>js/tinymce/tinymce.min.js"></script>
+<script>
+	tinyMCE.init({
+        // General options
+        mode : "textareas",
+        
+});
+</script>
+
+
+<?php $script = ob_get_clean(); ?>
 <?php include '../partials/footer.php'; ?>
