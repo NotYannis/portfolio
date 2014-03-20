@@ -13,9 +13,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/portfolio/css/bootstrap.css" rel="stylesheet">
-    <link href="/portfolio/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/portfolio/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="/portfolio/css/bootstrap-theme.min.css" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
@@ -33,7 +30,7 @@
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Mon portfoliooo</a>

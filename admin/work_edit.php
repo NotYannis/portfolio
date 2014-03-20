@@ -44,7 +44,6 @@ foreach ($categories as $category) {
 
 include '../partials/admin_header.php';
 
-
 ?>
 
 
@@ -69,20 +68,28 @@ include '../partials/admin_header.php';
 		<?= select('categories_id', $categories_list); ?>
 	</div>
 	<?= csrfInput(); ?>
-	<button type="submit" class="btn btn-default">Enregistrer</button>
+	<button type="submit" class="btn btn-primary btn-sm">Enregistrer</button>
 </form>
 
 
 <?php ob_start(); ?>
-<script scr="<?= WEBROOT; ?>js/tinymce/tinymce.min.js"></script>
-<script>
-	tinyMCE.init({
-        // General options
-        mode : "textareas",
-        
+<script src="<?= WEBROOT; ?>js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+(function($){
+$('#duplicatebtn').click(function(e){
+	e.preventDefault();
+	var $clone = $('#duplicate').clone().attr('id','').removeClass('hidden');
+	$('#duplicate').before($clone);
+	})
+
+})(jQuery);
+tinyMCE.init({
+  mode : "textareas"
 });
 </script>
 
-
-<?php $script = ob_get_clean(); ?>
+<?php
+$script = ob_get_clean();
+include '../partials/footer.php';
+?>
 <?php include '../partials/footer.php'; ?>

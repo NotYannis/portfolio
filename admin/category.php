@@ -42,9 +42,9 @@ $categories = $select->fetchAll();
 			<td><?= $category['id']; ?></td>
 			<td><?= $category['name']; ?></td>
 			<td>
-					<a href="category_edit.php?id=<?= $category['id']; ?>" class ="btn btn-default">
+					<a href="category_edit.php?id=<?= $category['id']; ?>" class ="btn btn-default btn-xs">
 					Edit</a>
-					<a href="?delete=<?= $category['id']; ?>&<?= csrf(); ?>" class="btn btn-error"
+					<a href="?delete=<?= $category['id']; ?>&<?= csrf(); ?>" class="btn btn-error btn-xs"
 					onclick="return confirm('Sur de supprimer ?');">Supprimer</a>
 			</td>
 		</tr>

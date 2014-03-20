@@ -28,7 +28,7 @@ $works = $select->fetchAll();
 
 <p><a href="work_edit.php" class="btn btn-success">Ajouter une nouvelle réalisation</a></p>
  
-<table class="table table-striped">
+<table class="table table-striped table-hover">
 	<thead>
 		<tr>
 			<th>Id</th>
@@ -42,9 +42,9 @@ $works = $select->fetchAll();
 			<td><?= $category['id']; ?></td>
 			<td><?= $category['name']; ?></td>
 			<td>
-					<a href="work_edit.php?id=<?= $category['id']; ?>" class ="btn btn-default">
+					<a href="work_edit.php?id=<?= $category['id']; ?>" class ="btn btn-default btn-xs">
 					Editer</a>
-					<a href="?delete=<?= $category['id']; ?>&<?= csrf(); ?>" class="btn btn-error"
+					<a href="?delete=<?= $category['id']; ?>&<?= csrf(); ?>" class="btn btn-error btn-xs"
 					onclick="return confirm('Sur de supprimer ?');">Supprimer</a>
 			</td>
 		</tr>

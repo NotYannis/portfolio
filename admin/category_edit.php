@@ -53,7 +53,7 @@ include '../partials/admin_header.php';
 		<?= input('slug'); ?>
 	</div>
 	<?= csrfInput(); ?>
-	<button type="submit" class="btn btn-default">Enregistrer</button>
+	<button type="submit" class="btn btn-primary btn-sm">Enregistrer</button>
 </form>
 
 <?php include '../partials/footer.php'; ?>
