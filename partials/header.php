@@ -15,8 +15,8 @@
     <link href="/portfolio/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-<!--     <link href="/portfolio/css/starter-template.css" rel="stylesheet">
- -->
+    <link href="/portfolio/css/starter-template.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -38,7 +38,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Mon Portfolio</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

@@ -1,7 +1,8 @@
 <?php
 
+define('WWW_ROOT', dirname(dirname(__FILE__)));
 //Donne la racine du serveur, ici : portfolio/
-$directory = basename(dirname(dirname(__FILE__)));
+$directory = basename(WWW_ROOT);
 
 /**
 * REQUEST_URI : Donne l'URL sur laquelle on se trouve
@@ -17,3 +18,5 @@ if(count($url) == 1){
 }else{
 define('WEBROOT', $url[0] . 'portfolio/');
 }
+
+define('IMAGES', WWW_ROOT . DIRECTORY_SEPARATOR . 'img');

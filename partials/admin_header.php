@@ -30,10 +30,10 @@
 
   <body>
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Mon portfoliooo</a>
+          <a class="navbar-brand" href="#">Mon Portfolio</a>
         </div>
         <ul class="nav navbar-nav" >
           <li>
