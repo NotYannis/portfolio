@@ -15,7 +15,7 @@ if(isset($_GET['delete'])){
 }
 
 /**
- * CATEGORIdESd
+ * CATEGORIES
  */
 $select = $db->query('SELECT id, name, slug FROM port_works');
 $works = $select->fetchAll();

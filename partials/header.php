@@ -9,13 +9,13 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Portfolio | Yannis Attard</title>
+    <title><?=isset($title) ? $title : 'Mon portfolio'; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="/portfolio/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/portfolio/css/starter-template.css" rel="stylesheet">
+    <link href="<?= WEBROOT; ?>css/starter-template.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -32,25 +32,14 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Mon Portfolio</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="admin/category.php">Catégories</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+          <a class="navbar-brand" href="<?= WEBROOT; ?>">Mon Portfolio</a>
         </div>
       </div>
     </div>
 
     <div class="container">
-        <?= flash(); ?>
 
-      <div class="starter-template">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <?= flash(); ?>

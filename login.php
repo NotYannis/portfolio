@@ -11,7 +11,7 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 	if($select->rowCount() > 0);{
 		$_SESSION['Auth'] = $select->fetch();
 		setFlash('Vous êtes maintenant connectés');
-		header('Location:' . WEBROOT . 'index.php');
+		header('Location:' . WEBROOT . 'admin/index.php');
 		die();
 	}
 }
@@ -28,7 +28,7 @@ include 'partials/header.php';
 	</div>
 	<div class="form-group">
 		<label for="password">Password</label>
-		<input type ="password" class="form_control" id="password" name="password">
+		<input type ="password" class="form_control input-sm" id="password" name="password">
 	</div>
 	<button type="submit" class="btn btn-default">Se connecter</button>
 </form>
