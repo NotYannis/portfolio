@@ -35,7 +35,7 @@
           <a class="navbar-brand" href="<?= WEBROOT; ?>">Mon Portfolio</a>
           <?php if(isset($categories)){
           foreach ($categories as $k => $category): ?>
-          <a class="navbar-brand" href="<?= WEBROOT; ?>categorie/<?= $category['slug']; ?>">
+          <a class="navbar-brand" href="#<?= $category['id']; ?>">
             <?= $category['name']; ?>
           </a>
         <?php endforeach;

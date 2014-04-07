@@ -17,12 +17,12 @@ if(isset($_GET['categorie'])){
 }
 
 
-$works = $db->query("SELECT port_works.name, port_works.id, port_works.slug, port_works.content, port_images.name as image_name
+$works = $db->query("SELECT port_works.name, port_works.id, port_works.slug, port_works.content, port_works.category_id, port_images.name as image_name
 					  FROM port_works
 					  LEFT JOIN port_images ON port_images.id = port_works.image_id
 					  $condition")->fetchAll();
 
-$categories = $db->query("SELECT slug, name FROM port_categories")->fetchAll();
+$categories = $db->query("SELECT id, slug, name FROM port_categories")->fetchAll();
 
 if($category){
 	$title = "Mes réalisations {$category['name']}";
@@ -91,7 +91,7 @@ include 'partials/header.php';
 </div>
 	
 <?php foreach ($works as $k => $work): ?>
-<div class="container">
+<div class="container" id = "<?= $work['category_id']; ?>">
 	<div class="row">
 		<div class="col-sm-4">
 			<div class="row">
