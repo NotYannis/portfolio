@@ -1,7 +1,7 @@
 
       </div>
 
-    </div><!-- /.container -->
+    <!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript

@@ -33,13 +33,15 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="<?= WEBROOT; ?>">Mon Portfolio</a>
+          <?php if(isset($categories)){
+          foreach ($categories as $k => $category): ?>
+          <a class="navbar-brand" href="<?= WEBROOT; ?>categorie/<?= $category['slug']; ?>">
+            <?= $category['name']; ?>
+          </a>
+        <?php endforeach;
+          }
+         ?>
         </div>
       </div>
     </div>
-
-    <div class="container">
-
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
         <?= flash(); ?>

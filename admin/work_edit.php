@@ -20,13 +20,13 @@ if(isset($_POST['name']) && isset($_POST['slug'])){
 		**/
 		if(isset($_GET['id'])){
 			$id = $db->quote($_GET['id']);
-			$db->query("UPDATE port_works SET name=$name, slug=$slug, content=$content, categories_id = $categories_id WHERE id=$id");
+			$db->query("UPDATE port_works SET name=$name, slug=$slug, content=$content, category_id = $categories_id WHERE id=$id");
 		}else{
-			$db->query("INSERT INTO port_works SET name=$name, slug=$slug, content=$content, categories_id = $categories_id");
+			$db->query("INSERT INTO port_works SET name=$name, slug=$slug, content=$content, category_id = $categories_id");
 			$_GET['id'] = $db->lastInsertId();
 		}
 		setFlash('La réalisation a bien été ajoutée');
-
+		
 		/**
 		* ENVOI DES IMAGES
 		**/
@@ -47,7 +47,6 @@ if(isset($_POST['name']) && isset($_POST['slug'])){
 				$db->query("UPDATE port_images SET name=$image_name WHERE id = $image_id");
 			}
 		}
-
 		header('Location:work.php');
 		die();
 	}else{

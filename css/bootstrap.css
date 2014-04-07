@@ -6081,3 +6081,31 @@ label,
 .affix {
   position: fixed;
 }
+
+/*body {
+    margin: 30px 0px;
+}*/
+.progress {
+  position: relative;
+  float : right;
+  height: 25px;
+  padding: 0 0 0 0;
+  width : 80%;
+}
+.progress > .progress-type {
+  position: absolute;
+  left: 0px;
+  font-weight: 800;
+  padding: 1px 30px 2px 10px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(25, 25, 25, 0.2);
+}
+.progress > .progress-completed {
+  position: absolute;
+  right: 0px;
+  font-weight: 800;
+  padding: 3px 10px 2px;
+}
+
+div.container.top-bar {
+}
