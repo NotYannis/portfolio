@@ -21,3 +21,19 @@ function select($id, $options = array()){
 	$return.= '</select>';
 	return $return;
 }
+
+function background($number){
+	switch($number){
+		case 0: $return = 'background: #092140; color: #FFFFFF';
+			break;
+		case 1: $return = 'background: #024959; color: #FFFFFF';
+			break;
+		case 2: $return = 'background: #F2C777';
+			break;
+		case 3: $return = 'background: #F24738';
+			break;
+		case 4: $return = 'background: #BF2A2A';
+			break;
+	}
+	return $return;
+}

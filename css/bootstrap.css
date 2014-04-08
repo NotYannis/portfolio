@@ -6107,5 +6107,18 @@ label,
   padding: 3px 10px 2px;
 }
 
-div.container.top-bar {
+div.container.works {
+  width:100%;
+}
+
+div.works img{
+  padding: 50px 0 50px 20px;
+}
+
+div.works h2{
+  padding-top: 30px;
+}
+
+div.top-bar h1{
+  padding-bottom: 10px;
 }
