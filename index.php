@@ -1,5 +1,6 @@
 <?php
 $auth = 0;
+$i = 0;
 include 'lib/includes.php'; 
 
 $condition = '';
@@ -34,11 +35,7 @@ if($category){
 include 'partials/header.php'; 
 ?>
 <div class="container top-bar">
-<?php if($category): ?>
-	<h1>Mes réalisations <?= $category['name']; ?></h1>
-<?php else: ?>
-	<h1>Bienvenue sur mon Portfolio</h1>	
-<?php endif ?>
+	<h1 style="text-align:center">Bienvenue sur le Portfolio de <a href="https://github.com/NotYannis">Yannis Attard</a></h1>
 
 <!--
 	Barre de progression
@@ -55,18 +52,18 @@ include 'partials/header.php';
 	        <span class="progress-completed">60%</span>
 	    </div>
 	    <div class="progress">
-	        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-	            <span class="sr-only">60% Complete (success)</span>
+	        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+	            <span class="sr-only">40% Complete (success)</span>
 	        </div>
 	        <span class="progress-type">PHP</span>
-	        <span class="progress-completed">60%</span>
+	        <span class="progress-completed">40%</span>
 	    </div>
 	    <div class="progress">
-	        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-	            <span class="sr-only">20% Complete (info)</span>
+	        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+	            <span class="sr-only">80% Complete (info)</span>
 	        </div>
-	        <span class="progress-type">Java</span>
-	        <span class="progress-completed">20%</span>
+	        <span class="progress-type">SQL</span>
+	        <span class="progress-completed">80%</span>
 	    </div>
 	    <div class="progress">
 	        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
@@ -90,35 +87,26 @@ include 'partials/header.php';
 	</div>
 </div>
 	
-<?php foreach ($works as $k => $work): ?>
-<div class="container" id = "<?= $work['category_id']; ?>">
+<?php foreach ($works as $k => $work){ ?>
+<div class="container works" id = "<?= $work['category_id']; ?>" style="<?= background($i) ?>">
 	<div class="row">
-		<div class="col-sm-4">
+		<div class="col-sm-5">
 			<div class="row">
-					<div class="col-sm-3">
-						<a href="<?= WEBROOT; ?>realisation/<?= $work['slug']; ?>">
-							<img = src="<?= WEBROOT; ?>img/works/<?= $work['image_name']; ?>" alt="">
-							<h2><?= $work['name']; ?></h2>
-						</a>
-					</div>
+				<div class="col-sm-3">
+					<img src="<?= WEBROOT; ?>img/works/<?= $work['image_name']; ?>" alt="">
+				</div>
 			</div>
 		</div>		
-	<div class="col-sm-6">
-		<?= $work['content']; ?>
-	</div>
+		<div class="col-sm-6">
+			<h2><?= $work['name']; ?></h2>
+			<?= $work['content']; ?>
+		</div>
 	</div>
 </div>
-<?php endforeach ?>
-
-		<div class="col-sm-4">
-			<ul>
-				<?php foreach ($categories as $k => $category): ?>
-				<!-- 	<a href="<?= WEBROOT; ?>categorie/<?= $category['slug']; ?>">
-						<?= $category['name']; ?>
-					</a> -->
-				<?php endforeach ?>
-			</ul>	
-		</div>
 <?php
+if($i > 4) $i = 0;
+else $i++;
+}
+
 include 'partials/footer.php';
 ?>

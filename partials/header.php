@@ -16,6 +16,12 @@
 
     <!-- Custom styles for this template -->
     <link href="<?= WEBROOT; ?>css/starter-template.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <script type="text/javascript" src="<?= WEBROOT; ?>js/jquery.localScroll.js"></script>
+    <script type="text/javascript" src="<?= WEBROOT; ?>js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="<?= WEBROOT; ?>js/lancement.js"></script>
+
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
