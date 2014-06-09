@@ -12,11 +12,11 @@
     <title>Portfolio | Yannis Attard</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/portfolio/css/bootstrap.css" rel="stylesheet">
+    <link href="<?= WEBROOT; ?>css/bootstrap.css" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
-    <link href="/portfolio/css/starter-template.css" rel="stylesheet">
+    <link href="<?= WEBROOT; ?>css/starter-template.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->

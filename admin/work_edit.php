@@ -139,7 +139,7 @@ include '../partials/admin_header.php';
 				<?= textarea('content'); ?>
 			</div>
 			<div class="form-group">
-				<label for="categories_id">URL de la réalisation</label>
+				<label for="categories_id">URL de la catégorie</label>
 				<?= select('categories_id', $categories_list); ?>
 			</div>
 			<?= csrfInput(); ?>

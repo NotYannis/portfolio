@@ -12,7 +12,7 @@
     <title><?=isset($title) ? $title : 'Mon portfolio'; ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/portfolio/css/bootstrap.css" rel="stylesheet">
+    <link href="<?= WEBROOT; ?>css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="<?= WEBROOT; ?>css/starter-template.css" rel="stylesheet">
@@ -21,6 +21,8 @@
     <script type="text/javascript" src="<?= WEBROOT; ?>js/jquery.localScroll.js"></script>
     <script type="text/javascript" src="<?= WEBROOT; ?>js/jquery.scrollTo.min.js"></script>
     <script type="text/javascript" src="<?= WEBROOT; ?>js/lancement.js"></script>
+    <script type="text/javascript" src="<?= WEBROOT; ?>js/contact.js"></script>
+
 
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -38,7 +40,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="<?= WEBROOT; ?>">Mon Portfolio</a>
+          <a class="navbar-brand" href="#1">Mon Portfolio</a>
           <?php if(isset($categories)){
           foreach ($categories as $k => $category): ?>
           <a class="navbar-brand" href="#<?= $category['id']; ?>">
@@ -48,6 +50,11 @@
           }
          ?>
         </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button type="button" class="btn btn-success btn-xs panel_button" alt="expand">Contact</button>
+          </li>
+        </ul>
       </div>
     </div>
         <?= flash(); ?>

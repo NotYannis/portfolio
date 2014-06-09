@@ -13,7 +13,7 @@ function select($id, $options = array()){
 	$return = "<select class='form_control input-sm' id='$id' name='$id'>";
 	foreach ($options as $k => $v) {
 		$selected = '';
-		if(isset($_POST[$id]) && $k == $_POST[$id]){
+		if(!isset($_POST[$id]) && $k == $_POST['category_id']){
 			$selected = ' selected ="selected"';
 		}
 		$return .= "<option value='$k' $selected>$v</option>";
@@ -26,13 +26,13 @@ function background($number){
 	switch($number){
 		case 0: $return = 'background: #092140; color: #FFFFFF';
 			break;
-		case 1: $return = 'background: #024959; color: #FFFFFF';
+		case 1: $return = 'background: #43ac6a; color: #FFFFFF';
 			break;
-		case 2: $return = 'background: #F2C777';
+		case 2: $return = 'background: #5bc0de';
 			break;
-		case 3: $return = 'background: #F24738';
+		case 3: $return = 'background: #e99002';
 			break;
-		case 4: $return = 'background: #BF2A2A';
+		case 4: $return = 'background: #f04124';
 			break;
 	}
 	return $return;
