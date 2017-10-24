@@ -37,7 +37,7 @@ if($_GET['send']==1){
 		setFlash('Votre message a bien été envoyé. Merci !');
 	}
 	else{
-		setFlash('Oops ! Il y a eu une erreur lors de l\'envoi de l\'email...', 'danger');
+		setFlash('<strong>Oops !</strong> Il y a eu une erreur lors de l\'envoi de l\'email...', 'danger');
 	}
 }
 
